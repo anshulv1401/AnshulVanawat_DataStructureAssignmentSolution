@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="124de690-6800-42e8-ab36-1afb8297fe26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/greatlearning/btconverter/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/greatlearning/btconverter/model/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/greatlearning/btconverter/service/BSTServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ques 1/src/com/anshulvanawat/skyscraper/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ques 1/src/com/anshulvanawat/skyscraper/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/greatlearning/btconverter/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/greatlearning/btconverter/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/greatlearning/btconverter/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/greatlearning/btconverter/model/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/greatlearning/btconverter/service/BSTServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/greatlearning/btconverter/service/BSTServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,5 +74,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -2,11 +2,18 @@ package com.greatlearning.btconverter.service;
 
 import com.greatlearning.btconverter.model.Node;
 
+
+/**
+ * BST Services provides operations that operates on BST like
+ * 1. InOrder Traversal
+ * 2. Conversion from BST to RightSkewedBST
+ * */
 public class BSTServices {
 
     Node skewedTreeNode = null;
     Node tempPrevNode = null;
 
+    //InOrder tree traversal
     public void inOrder(Node root) {
         if (root == null) return;
         else {
@@ -16,49 +23,46 @@ public class BSTServices {
         }
     }
 
-    public Node convertBSTIntoRightSkewedBST(Node node) {
+    /**
+     * Algo Comment Start
+     *
+     * Declare 2 nodes as skewedTreeNode and tempPrevNode
+     *
+     * if root == null (empty tree/subtree)
+     *   then return
+     *
+     * Recursive call to left subtree of the root to convert BST into RightSkewed BST
+     *
+     * if skewedTreeNode == null (i.e. if skewedTree is not yet initialised)
+     *   then set skewedTreeNode = node
+     * else
+     *   set right of tempPrevNode = root
+     *
+     * set tempPrevNode = root (make current node as previous node)
+     * set left of root = null
+     *
+     * Recursive call to right subtree of the root to convert BST into RightSkewed BST
+     *
+     * Algo comment End
+     * */
+    public Node convertBSTIntoRightSkewedBST(Node root) {
 
-        if (node == null) {
+        if (root == null) {
             return skewedTreeNode;
         }
 
-        convertBSTIntoRightSkewedBST(node.left);
+        convertBSTIntoRightSkewedBST(root.left);
 
         if (skewedTreeNode == null) {
-            skewedTreeNode = node;
-            tempPrevNode = node;
+            skewedTreeNode = root;
         } else {
-            tempPrevNode.right = node;
-            tempPrevNode = node;
+            tempPrevNode.right = root;
         }
-        node.left = null;
+        tempPrevNode = root;
+        root.left = null;
 
-        convertBSTIntoRightSkewedBST(node.right);
+        convertBSTIntoRightSkewedBST(root.right);
 
         return skewedTreeNode;
-    }
-
-    public Node insert(Node root, int key) {
-        Node newNode = new Node(key);
-        Node x = root;
-        Node y = null; // y maintains pointer to x
-        while (x != null) {
-            y = x;
-            if (key < x.getData()) x = x.left;
-            else if (key > x.getData()) x = x.right;
-            else {
-                System.out.println("Value already exists!!!");
-                return newNode;
-            }
-        }// If the root is null, the tree is empty.
-        if (y == null)
-            y = newNode;
-        // assign new node to the left child
-        else if (key < y.getData())
-            y.left = newNode;
-        // assign the new node to the right child
-        else
-            y.right = newNode;// return pointer to new node
-        return y;
     }
 }

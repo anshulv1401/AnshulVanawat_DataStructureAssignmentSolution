@@ -1,5 +1,8 @@
 package com.greatlearning.btconverter.model;
 
+/**
+ * node of a tree with data, left node and right node
+ * */
 public class Node {
     private int data;
     public Node left, right;

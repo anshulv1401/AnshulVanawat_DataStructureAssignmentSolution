@@ -5,25 +5,27 @@ import com.anshulvanawat.skyscraper.service.MergeSort;
 import java.util.Scanner;
 import java.util.Stack;
 
-/** Algo Comment Start
- *
+/**
+ * Algo Comment Start
+ * <p>
  * Create DayWise FloorSize array
  * Create desc Order FloorSizes Stack such that pop operation return max floor size value
  * Create empty temp Stack
- *
+ * <p>
  * Loop through for each day
  * fetch and compare the floor size of the day with the largest floor size which is not yet assembled
  * if floorSizeOfTheDay != largestFloorSize
- *     Push floorSizeOfTheDay onto tempStack
+ * Push floorSizeOfTheDay onto tempStack
  * else
- *     then print floorSize of the day
- *     loop through tempStack
- *        if tempStack.peek() == descFloorSizesStack.peek()
- *            pop from descFloorSizesStack and tempStack, as well as print the popped Item
- *        else
- *            break out of the loop.
- *
- *Algo comment End*/
+ * print floorSize of the day
+ * loop through tempStack
+ * if tempStack.peek() == descFloorSizesStack.peek()
+ * pop from descFloorSizesStack and tempStack, as well as print the popped Item
+ * else
+ * break out of the loop.
+ * <p>
+ * Algo comment End
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -66,13 +68,15 @@ public class Main {
             } else {
                 System.out.print(descFloorSizesStack.pop() + " ");
                 while (!tempStack.isEmpty() && descFloorSizesStack.peek() == tempStack.peek()) {
-                    System.out.print(descFloorSizesStack.pop() + " ");
+                    var poppedItem = descFloorSizesStack.pop();
                     tempStack.pop();
+                    System.out.print(poppedItem + " ");
                 }
             }
             System.out.println("");
         }
-        /*Algo implementation Ens*/
+        /*Algo implementation End*/
+
         sc.close();
     }
 }
