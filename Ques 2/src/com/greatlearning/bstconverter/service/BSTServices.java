@@ -1,6 +1,6 @@
-package com.greatlearning.btconverter.service;
+package com.greatlearning.bstconverter.service;
 
-import com.greatlearning.btconverter.model.Node;
+import com.greatlearning.bstconverter.model.Node;
 
 
 /**

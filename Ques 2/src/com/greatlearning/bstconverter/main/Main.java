@@ -1,9 +1,7 @@
-package com.greatlearning.btconverter.main;
+package com.greatlearning.bstconverter.main;
 
-import com.greatlearning.btconverter.model.Node;
-import com.greatlearning.btconverter.service.BSTServices;
-
-import java.util.Scanner;
+import com.greatlearning.bstconverter.model.Node;
+import com.greatlearning.bstconverter.service.BSTServices;
 
 /**
  * The BST given in the question is NOT a BST as 40 can not be part of the right subtree of 50.

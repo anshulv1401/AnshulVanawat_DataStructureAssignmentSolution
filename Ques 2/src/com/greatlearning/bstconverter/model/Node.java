@@ -1,4 +1,4 @@
-package com.greatlearning.btconverter.model;
+package com.greatlearning.bstconverter.model;
 
 /**
  * node of a tree with data, left node and right node
